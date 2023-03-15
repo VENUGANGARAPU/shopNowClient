@@ -55,7 +55,7 @@ const bestOfCollection = productsData.filter((eachItem)=>eachItem.bestOfCollecti
               }
               return<article key={id} className= {slider} >
                 <Link className="link" to={`/product/${id}`}>
-            <img src={image}/></Link>
+            <img src={image} alt={title}/></Link>
               </article>
             })
           }
@@ -67,7 +67,7 @@ const bestOfCollection = productsData.filter((eachItem)=>eachItem.bestOfCollecti
           <div className="homepage-adv">
             <div className="baners" onClick={updateFilterValue}>
              <Link className="link" to='/electronics'><h3>Up to 70% off | Clearance store</h3>
-              <img src='image/stockclearences.jpg' ></img>
+              <img src='image/stockclearences.jpg' alt="70%"></img>
               <p >see more</p></Link> 
             </div>
           </div>
@@ -77,7 +77,7 @@ const bestOfCollection = productsData.filter((eachItem)=>eachItem.bestOfCollecti
               <Link className="link" to='product/64095037ec60fcecbdb66056'>
               <p style={{fontWeight:'bold'}}>Price Drop ON</p>
               <p>Mi Smart Tvs</p>
-              <img src='https://m.media-amazon.com/images/I/81oHGrH1PwL._SL1500_.jpg'></img>
+              <img src='https://m.media-amazon.com/images/I/81oHGrH1PwL._SL1500_.jpg' alt="Mi smart Tv"></img>
               <p style={{fontSize:'smaller',color:'green'}}>from <span>₹13,999</span></p>
               <p>On sale</p></Link>
             </div>
@@ -87,7 +87,7 @@ const bestOfCollection = productsData.filter((eachItem)=>eachItem.bestOfCollecti
               <p>Smart watches</p>
             <div className="baners">
            <Link className="link" to='product/64096dc4ec60fcecbdb660f8'>
-              <img src='image/smartwatches1.jpg'></img>
+              <img src='image/smartwatches1.jpg' alt="smart watches"></img>
               <p style={{fontSize:'smaller',color:'green'}}>from <span>₹799</span></p>
 
              <p>see more</p></Link>
@@ -97,12 +97,12 @@ const bestOfCollection = productsData.filter((eachItem)=>eachItem.bestOfCollecti
           <div className="homepage-adv">
             <div className="baners">
               <div className="banners-inner">
-                <div className="banners-inner2"><Link className="link" to='product/6409589aec60fcecbdb66062'><img src='https://m.media-amazon.com/images/I/51-y23++4iL._SY355_.jpg'></img><p>webCams</p></Link></div>
-                <div className="banners-inner2"><Link className="link" to='product/64095af3ec60fcecbdb66066'><img src='image/powerbanks.jpeg'></img><p>powerbanks</p></Link></div>
+                <div className="banners-inner2"><Link className="link" to='product/6409589aec60fcecbdb66062'><img src='https://m.media-amazon.com/images/I/51-y23++4iL._SY355_.jpg' alt="webcams"></img><p>webCams</p></Link></div>
+                <div className="banners-inner2"><Link className="link" to='product/64095af3ec60fcecbdb66066'><img src='image/powerbanks.jpeg' alt="powerbanks"></img><p>powerbanks</p></Link></div>
               </div>
               <div className="banners-inner">
-              <div className="banners-inner2"><Link className="link" to='product/64095c23ec60fcecbdb66068'><img src='image/bands.jpeg'></img><p>smart band</p></Link></div>
-              <div className="banners-inner2"><Link className="link" to='product/6409589aec60fcecbdb66062'><img src='https://static-ecapac.acer.com/media/mf_webp/jpg/media/catalog/product/cache/a2e755bb2f5b00fa33d64eface9107e3/u/m/um.iv6ss.b08-main_1.webp'></img><p>Monitors</p></Link></div>
+              <div className="banners-inner2"><Link className="link" to='product/64095c23ec60fcecbdb66068'><img src='image/bands.jpeg' alt="smart band"></img><p>smart band</p></Link></div>
+              <div className="banners-inner2"><Link className="link" to='product/6409589aec60fcecbdb66062'><img src='https://static-ecapac.acer.com/media/mf_webp/jpg/media/catalog/product/cache/a2e755bb2f5b00fa33d64eface9107e3/u/m/um.iv6ss.b08-main_1.webp' alt="Monitors"></img><p>Monitors</p></Link></div>
             </div>
             <Link to='/electronics'>
             <p>see more</p>
@@ -121,7 +121,7 @@ const bestOfCollection = productsData.filter((eachItem)=>eachItem.bestOfCollecti
           {bestOfCollection.map((product)=>{
             const{title,_id,companyname,price,img}=product;
             return<div key={_id} className="product">
-             <Link className="link"  to={`/product/${_id}`}> <img style={{height:'6rem'}} src={img}></img>
+             <Link className="link"  to={`/product/${_id}`}> <img style={{height:'6rem'}} src={img} alt={companyname}></img>
               <p>{title}</p>
               <p style={{color :'green'}}>from</p>
               <p> ₹{price}</p></Link>
@@ -134,12 +134,12 @@ const bestOfCollection = productsData.filter((eachItem)=>eachItem.bestOfCollecti
            <div className="homepage-adv">
             <div className="baners">
               <div className="banners-inner">
-                <div className="banners-inner2"><Link className="link" to='product/640961a2ec60fcecbdb66096'><img src='image/speaker.jpg'></img><p>speakers</p></Link></div>
-                <div className="banners-inner2"><Link className="link" to='product/64096d22ec60fcecbdb660f4'><img src='https://m.media-amazon.com/images/I/61rKklSHqPL._SL1500_.jpg'></img><p>Chargers</p></Link></div>
+                <div className="banners-inner2"><Link className="link" to='product/640961a2ec60fcecbdb66096'><img src='image/speaker.jpg' alt="speakers"></img><p>speakers</p></Link></div>
+                <div className="banners-inner2"><Link className="link" to='product/64096d22ec60fcecbdb660f4'><img src='https://m.media-amazon.com/images/I/61rKklSHqPL._SL1500_.jpg' alt="Chargers"></img><p>Chargers</p></Link></div>
               </div>
               <div className="banners-inner">
-              <div className="banners-inner2"><Link className="link" to='product/64096bdeec60fcecbdb660f0'><img src='https://resource.logitech.com/w_572,c_limit,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/products/mice/m190-wireless-mouse/m190-wireless-mouse-red-gallery-04.png?v=1AAAAAAAAAB//9k='></img><p>mouse</p></Link></div>
-              <div className="banners-inner2"><Link className="link" to='product/64096dc4ec60fcecbdb660f8'><img src='image/smartwatches.jpg'></img><p>powerbanks</p></Link></div>
+              <div className="banners-inner2"><Link className="link" to='product/64096bdeec60fcecbdb660f0'><img src='https://resource.logitech.com/w_572,c_limit,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/products/mice/m190-wireless-mouse/m190-wireless-mouse-red-gallery-04.png?v=1AAAAAAAAAB//9k=' alt="mouse"></img><p>mouse</p></Link></div>
+              <div className="banners-inner2"><Link className="link" to='product/64096dc4ec60fcecbdb660f8'><img src='image/smartwatches.jpg' alt="powerbanks"></img><p>powerbanks</p></Link></div>
             </div>
             <Link to='/electronics' >
             <p>see more</p>
@@ -150,7 +150,7 @@ const bestOfCollection = productsData.filter((eachItem)=>eachItem.bestOfCollecti
           <div className="homepage-adv">
             <div className="baners">
             <Link className="link" to='product/63f70fd2bcc28ec01bcf53d3'>
-              <img src='image/samsung a7.jpg'></img>
+              <img src='image/samsung a7.jpg' alt="Tab"></img>
               <p>Samsung Galaxy Tab A7</p>
               <p style={{fontSize:'smaller',color:'green'}}>from</p>
               <p>₹19,999</p></Link>
@@ -160,13 +160,13 @@ const bestOfCollection = productsData.filter((eachItem)=>eachItem.bestOfCollecti
           <div className="homepage-adv">
             <div className="baners">
             <Link className="link" to='product/64096facec60fcecbdb66104'>
-              <img src='https://m.media-amazon.com/images/I/711yJipUQVL._SL1500_.jpg'></img>
+              <img src='https://m.media-amazon.com/images/I/711yJipUQVL._SL1500_.jpg' alt="Printers"></img>
               <p>Printers</p>
               </Link>
             </div>
             <div className="baners">
             <Link className="link" to='product/640970caec60fcecbdb6610a'>
-              <img src='https://images-eu.ssl-images-amazon.com/images/I/8150iUXkc5L._AC_UL600_SR600,400_.jpg'></img>
+              <img src='https://images-eu.ssl-images-amazon.com/images/I/8150iUXkc5L._AC_UL600_SR600,400_.jpg' alt="Monitors"></img>
               <p>Monitors</p>
               </Link>
             </div>
@@ -174,7 +174,7 @@ const bestOfCollection = productsData.filter((eachItem)=>eachItem.bestOfCollecti
 
           <div className="homepage-adv">
             <div className="baners">
-              <Link to='/electronics'><button name='stockClearance' value='70' onClick={updateFilterValue}><img src='image/laptopweb.jpg' ></img></button></Link>
+              <Link to='/electronics'><button name='stockClearance' value='70' onClick={updateFilterValue}><img src='image/laptopweb.jpg' alt="laptops"></img></button></Link>
             </div>
             <p>Sign in for your best experience</p>
             <Link to='/sign in'>
@@ -190,7 +190,7 @@ const bestOfCollection = productsData.filter((eachItem)=>eachItem.bestOfCollecti
           {topSelling.map((product)=>{
             const{title,_id,companyname,price,img}=product;
             return<div key={_id} className="product"><Link to={`product/${_id}`} className="link">
-              <img style={{height:'6rem'}} src={img}></img>
+              <img style={{height:'6rem'}} src={img} alt={title}></img>
               <p>{companyname}</p>
               <p style={{color :'green'}}>from</p>
               <p> ₹{price}</p></Link>

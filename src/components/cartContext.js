@@ -38,7 +38,7 @@ useEffect(()=>{
  }
 
 currentuser && getData();
-},[currentuser]);
+},[currentuser,Token]);
 
 useEffect(()=>{
 
@@ -52,12 +52,13 @@ useEffect(()=>{
      const usercart =await axios.post('https://shopnowapi.onrender.com/api/v1/order',{userId},{
          headers: {token:Token }
      });
+     usercart()
   }
   currentuser &&  postData();
  }
 }
 currentuser && getData();
-},[ordersdata]);
+},[ordersdata,Token,currentuser]);
 
 useEffect(()=>{
   
@@ -67,6 +68,7 @@ useEffect(()=>{
       const updateCart = await axios.put(`https://shopnowapi.onrender.com/api/v1/cart/${userCart._id}`,user,{
         headers:{token :Token}
       });
+      updateCart();
     } catch (error) {
       console.log(error);
     }
@@ -74,7 +76,7 @@ useEffect(()=>{
 
   currentuser &&  update()
 
-},[bagItems]);
+},[bagItems,Token,currentuser,userCart._id]);
 
 
     const removeitem=(id)=>{ 
@@ -113,7 +115,7 @@ useEffect(()=>{
    
 
   return (
-    <cartProvider.Provider value={{bagItems,setBagItems,removeitem,emptyCart,Increase,Decrease,totalquantity,userCart,totalAmount,setTotalamount}}>
+    <cartProvider.Provider value={{bagItems,setBagItems,removeitem,emptyCart,Increase,Decrease,totalquantity,userCart,totalAmount,setTotalamount,setTotal,setOrdersData}}>
         {children}
     </cartProvider.Provider>
   )

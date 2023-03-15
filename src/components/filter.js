@@ -2,7 +2,7 @@ import React,{useContext} from 'react';
 import {FilterContext} from './filterContext';
 import './styles/filter.css';
 
-function Filter({sideBar,setSidebar} ) {
+function Filter({setSidebar} ) {
   const {allproducts,updateFilterValue,clearFilter,filters:{
     text,
     companyname,price,title
@@ -31,7 +31,7 @@ function Filter({sideBar,setSidebar} ) {
   
 const byTitle = filters(allproducts,"title");
 const byCompany =filters(allproducts,"companyname");
-const byPrice =filters(allproducts,"price");
+// const byPrice =filters(allproducts,"price");
 const byRating = ratings();
 
 const  handleChanges =(e)=>{

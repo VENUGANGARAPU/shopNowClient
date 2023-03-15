@@ -1,4 +1,4 @@
-import React,{useContext, useState}from 'react';
+import React,{useContext}from 'react';
 import {FaCartPlus} from 'react-icons/fa';
 import {BsPersonPlusFill} from 'react-icons/bs';
 import './styles/header.css';

@@ -8,7 +8,7 @@ const Products =()=>{
     return <section className="products-container" >
         <div className="products-main">
         {filterProducts.map((eactItem)=>{
-            const{id,type} =eactItem;
+            const{id} =eactItem;
             return <>
                 <Singleitem key={id} item={eactItem}/>
                     </>

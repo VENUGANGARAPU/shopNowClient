@@ -28,7 +28,7 @@ if(bagItems.length >= 1){
 
 useEffect(()=>{
     setTotalamount(total)
-},[total]);
+},[total,setTotalamount]);
 
 
 

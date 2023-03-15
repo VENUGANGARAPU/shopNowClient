@@ -1,4 +1,4 @@
-import React,{useContext, useState,useEffect} from "react";
+import React,{useContext, useState} from "react";
 import Header from "./header";
 import './styles/electronics.css';
 import Filter from "./filter";

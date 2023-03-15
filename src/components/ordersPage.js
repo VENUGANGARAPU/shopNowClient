@@ -9,7 +9,7 @@ import Header from './header';
 
 const Orderspage = () => {
 
-  const {currentuser,Token,islogged} = useContext(api);
+  const {currentuser,Token} = useContext(api);
   const [orders,setOrders] = useState([]);
   const [isloading,setIsloading] =useState(true);
 
@@ -22,7 +22,7 @@ const Orderspage = () => {
     setIsloading(false);
   }
   currentuser && getOrders(); 
-},[currentuser]);
+},[currentuser,Token]);
 console.log(orders)
 const monthNames = ["January", "February", "March", "April", "May", "June",
 "July", "August", "September", "October", "November", "December"
@@ -37,7 +37,7 @@ const monthNames = ["January", "February", "March", "April", "May", "June",
       <div className='orders-main'>
         {isloading && <h1 style={{color:'purple'}}>... Loading</h1>}
         {orders && orders.map((eachOrder)=>{
-          const {address,amount,products,status,createdAt}=eachOrder;
+          const {amount,products,status,createdAt}=eachOrder;
           let dates = new Date(createdAt);
           return <div>
             <p style={{textAlign:'left',marginLeft:'10px'}}>Ordered on <b>{dates.getDate()} {monthNames[dates.getMonth()+1]} {dates.getFullYear()}</b></p>
@@ -46,7 +46,7 @@ const monthNames = ["January", "February", "March", "April", "May", "June",
             return<div className='orders-main2'>
               <div className='orders-article'>
               <Link to={`/product/${product.productId}`}>
-              <img src={product.img}></img>
+              <img src={product.img} alt={product.productName}></img>
               </Link>
               <div className='order-productDetails'>
                 <p style={{fontWeight:'600'}}>{product.productName}</p>

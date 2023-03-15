@@ -1,5 +1,5 @@
-import React, { useContext } from 'react';
-import {BrowserRouter as Router, Routes,Route, BrowserRouter} from 'react-router-dom';
+import React from 'react';
+import {BrowserRouter as Router, Routes,Route} from 'react-router-dom';
 import './App.css';
 import Homepage from './components/homepage';
 import Electronics from './components/electronics';
@@ -10,7 +10,7 @@ import {Contextproduct} from './components/productsContext';
 import { FilterContextProvider } from './components/filterContext';
 import { CartContext } from './components/cartContext';
 import Product from './components/product';
-import { Apicalls ,api} from './reducers/apiContext';
+import { Apicalls} from './reducers/apiContext';
 import Orderspage from './components/ordersPage';
 import Order from './components/order';
 

@@ -35,7 +35,7 @@ const Contextproduct = ({children}) => {
       dispatch({type:"Productsdata",payload:response.data});
     }
     getProducts();
-  },[initialState]);
+  });
 
   return (
     <productContext.Provider value={{...state}}>

@@ -39,6 +39,7 @@ export const reducer =(state,action)=>{
                         console.log(curr)
                         return curr
                       }
+                      return curr
                     });
                   }
                     

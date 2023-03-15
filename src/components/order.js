@@ -1,4 +1,4 @@
-import React,{useState,useEffect,useContext} from 'react';
+import React,{useState,useContext} from 'react';
 import { Link } from 'react-router-dom';
 import {api} from '../reducers/apiContext';
 import { cartProvider } from "./cartContext";
@@ -30,7 +30,8 @@ function Order() {
   const getOrders = async()=>{
     const order = await axios.post('https://shopnowapi.onrender.com/api/v1/order',orderDetails,{
         headers:{token :Token}
-      })
+      });
+      order();
   }
 
 

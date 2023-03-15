@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import './styles/singleProducts.css';
 import { Link } from "react-router-dom";
 import {cartProvider} from "./cartContext.js"
@@ -6,17 +6,14 @@ import {cartProvider} from "./cartContext.js"
 const Singleitem =({item} )=>{
     const {bagItems,setBagItems} = useContext(cartProvider);
 
-    const{img,productName,company,price,_id,rating}=item;
-    const movetobag=()=>{
-        const data = [...bagItems,item];
-        setBagItems(data);
-    }
+    const{img,productName,company,price,rating}=item;
+
    
     return <>
     < div className="singleProduct-main ">
         <Link to={`/product/${item._id}`}>
         <div className="singleProduct-items">
-         <img src={img}/>
+         <img src={img} alt={company}/>
          <p>{productName}</p>
          <div style={{textAlign:'center'}}><p style={{backgroundColor:'rgb(27, 120, 22)',color:'whitesmoke',width:'fit-content',borderRadius:'2px',fontSize:'12px',padding:'2px'}}>{rating} ★</p>
 </div>
