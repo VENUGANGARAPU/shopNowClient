@@ -57,11 +57,12 @@ const monthNames = ["January", "February", "March", "April", "May", "June",
             </div>
               </div>
             })}</div>
-            <div style={{textAlign:'left'}}>
+            <div style={{textAlign:'left'}} className='status'>
             <p>order status:<b>{status}</b></p>
             <p>Total amount to be paid :<b>₹{amount}</b></p>
             </div>
             </div>
+            <hr className='.my-hr' style={{borderTop : "1px solid #f9f6f6"}}/>
             </div>
           })}
       </div>
