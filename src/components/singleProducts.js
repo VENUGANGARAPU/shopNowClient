@@ -1,7 +1,6 @@
-import React, { useContext } from "react";
+import React from "react";
 import './styles/singleProducts.css';
 import { Link } from "react-router-dom";
-import {cartProvider} from "./cartContext.js"
 
 const Singleitem =({item} )=>{
 
