@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import {cartProvider} from "./cartContext.js"
 
 const Singleitem =({item} )=>{
-    const {bagItems,setBagItems} = useContext(cartProvider);
 
     const{img,productName,company,price,rating}=item;
 
