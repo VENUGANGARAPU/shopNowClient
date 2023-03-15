@@ -49,7 +49,7 @@ const reload =()=>{
             <input type='text' name='password' required onChange={(e)=>setpassword(e.target.value)}></input>
          </div>
          <button type='submit' disabled={error}>Sign In</button>
-          {error && <button style={{color:'red',backgroundColor:'white'}} onClick={reload}>Reload page</button>}
+          {error && <Link to='/'><button style={{color:'red',backgroundColor:'white'}} onClick={reload}>Reload page</button></Link> }
           </form>
          <p style={{fontSize:'10px'}}>By signing up, you agree to our terms of service and privacy policy.</p>
          <hr/>
